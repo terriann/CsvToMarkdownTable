@@ -1,8 +1,8 @@
 {
-  "name": "csv-to-markdown-table",
-  "description": "JavaScript/Node.js Csv to Markdown Table Converter",
+  "name": "cav-to-plain-text-table",
+  "description": "A Simple JavaScript/Node.js CSV to Markdown Table Converter with Confluence Markup Support Edit",
   "main": "./lib/CsvToMarkdown.js",
-  "version": "0.4.0",
+  "version": "0.1.0",
   "types": "./lib/CsvToMarkdown.d.js",
   "scripts": {
     "test": "node_modules/.bin/mocha test"
@@ -14,7 +14,10 @@
   "keywords": [
     "csv",
     "markdown",
-    "github"
+    "github",
+    "jira",
+    "confluence",
+    "confluence markup"
   ],
   "author": {
     "name": "Jesse G. Donat",
@@ -23,9 +26,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/donatj/CsvToMarkdownTable/issues"
+    "url": "https://github.com/terriann/CsvToPlainTextTable/issues"
   },
-  "homepage": "https://donatstudios.com/CsvToMarkdownTable",
+  "homepage": "",
   "devDependencies": {
     "@types/node": "^7.0.12",
     "@types/requirejs": "^2.1.29",
