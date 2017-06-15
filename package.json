@@ -1,11 +1,12 @@
 {
-  "name": "cav-to-plain-text-table",
+  "name": "csv-to-plain-text-table",
   "description": "A Simple JavaScript/Node.js CSV to Markdown Table Converter with Confluence Markup Support Edit",
   "main": "./lib/CsvToMarkdown.js",
   "version": "0.1.0",
   "types": "./lib/CsvToMarkdown.d.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha test"
+    "test": "node_modules/.bin/mocha test",
+    "lint": "node_modules/.bin/tslint -c tslint.json 'src/*.ts'"
   },
   "repository": {
     "type": "git",
