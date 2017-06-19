@@ -7,24 +7,25 @@
  * @param {boolean} useDoubleBarHeader - Whether the header uses double barlines for <th>
  * @returns {string}
  */
-function csvToMarkdown(csvContent: string, delimiter: string = "\t", hasHeader: boolean = false, useDoubleBarHeader: boolean = false) {
-	if (delimiter != "\t") {
-		csvContent = csvContent.replace(/\t/g, "    ");
+// tslint:disable-next-line:max-line-length
+function csvToMarkdown(csvContent: string, delimiter: string = '\t', hasHeader: boolean = false, useDoubleBarHeader: boolean = false) {
+	if (delimiter !== '\t') {
+		csvContent = csvContent.replace(/\t/g, '    ');
 	}
 
-	const columns = csvContent.split("\n");
+	const columns = csvContent.split('\n');
 
 	const tabularData: string[][] = [];
 	const maxRowLen: number[] = [];
 
 	columns.forEach((e, i) => {
-		if (typeof tabularData[i] == "undefined") {
+		if (typeof tabularData[i] === 'undefined') {
 			tabularData[i] = [];
 		}
 		const regex = new RegExp(delimiter + '(?![^"]*"\\B)');
 		const row = e.split(regex);
 		row.forEach((ee, ii) => {
-			if (typeof maxRowLen[ii] == "undefined") {
+			if (typeof maxRowLen[ii] === 'undefined') {
 				maxRowLen[ii] = 0;
 			}
 
@@ -33,48 +34,48 @@ function csvToMarkdown(csvContent: string, delimiter: string = "\t", hasHeader: 
 		});
 	});
 
-	let headerOutput = "";
-	let seperatorOutput = "";
+	let headerOutput = '';
+	let seperatorOutput = '';
 
 	maxRowLen.forEach((len) => {
 		const sizer = Array(len + 1 + 2);
 
-		seperatorOutput += "|" + sizer.join("-");
-		headerOutput += "|" + sizer.join(" ");
+		seperatorOutput += '|' + sizer.join('-');
+		headerOutput += '|' + sizer.join(' ');
 	});
 
-	headerOutput += "| \n";
-	seperatorOutput += "| \n";
+	headerOutput += '| \n';
+	seperatorOutput += '| \n';
 
 	if (hasHeader) {
-		headerOutput = "";
+		headerOutput = '';
 	}
 
-	let rowOutput = "";
+	let rowOutput = '';
 	tabularData.forEach((col, i) => {
 		maxRowLen.forEach((len, y) => {
-			const row = typeof col[y] == "undefined" ? "" : col[y];
+			const row = typeof col[y] === 'undefined' ? '' : col[y];
 			let preSpaceCount = 1;
 			let postSpaceCount = (len - row.length ) + 1;
 
-			if(useDoubleBarHeader) {
-				if(i > 0 ) {
+			if (useDoubleBarHeader) {
+				if (i > 0 ) {
 					postSpaceCount++;
 					preSpaceCount++;
-					if(y > 0) {
+					if (y > 0) {
 						preSpaceCount--;
 					}
 				}
-				if(!hasHeader && i===0) {
+				if (!hasHeader && i === 0) {
 					postSpaceCount++;
-					if(y === 0) {
+					if (y === 0) {
 						preSpaceCount++;
 					}
 				}
 			}
 
-			const preSpacing = Array(preSpaceCount + 1).join(" ");
-			const spacing = Array(postSpaceCount + 1).join(" ");
+			const preSpacing = Array(preSpaceCount + 1).join(' ');
+			const spacing = Array(postSpaceCount + 1).join(' ');
 			const out = `|${preSpacing}${row}${spacing}`;
 
 			if (hasHeader && i === 0) {
@@ -85,13 +86,13 @@ function csvToMarkdown(csvContent: string, delimiter: string = "\t", hasHeader: 
 		});
 
 		if (hasHeader && i === 0) {
-			headerOutput += "| \n";
+			headerOutput += '| \n';
 		} else {
-			rowOutput += "| \n";
+			rowOutput += '| \n';
 		}
 	});
 
-	if(useDoubleBarHeader) {
+	if (useDoubleBarHeader) {
 		headerOutput = headerOutput.replace(/\|/g, '||');
 		seperatorOutput = '';
 	}
@@ -99,6 +100,6 @@ function csvToMarkdown(csvContent: string, delimiter: string = "\t", hasHeader: 
 	return headerOutput + seperatorOutput + rowOutput;
 }
 
-if (typeof module != "undefined") {
+if (typeof module !== 'undefined') {
 	module.exports = csvToMarkdown;
 }

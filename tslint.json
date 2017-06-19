@@ -2,23 +2,23 @@
 	"extends": "tslint:recommended",
 	"rules": {
 		"class-name": true,
-		// "comment-format": [true, "check-space"],
+		"comment-format": [true, "check-space", "check-lowercase", {"ignore-words": ["TODO:", "HACK:", "FIXME:"]}],
 		"indent": [
 			true,
 			"tabs"
 		],
-		"quotemark": false,
-		"align": false,
-		"typedef-whitespace": false,
-		"interface-name": false,
-		"triple-equals": false,
-		"whitespace": false,
-		"max-line-length": false,
-		"eofline": false,
-		"no-empty": false,
-		"one-variable-per-declaration": false,
-		"member-ordering": false,
-		"max-classes-per-file": false,
+		"quotemark": [true, "single"],
+		"align": [false],
+		"typedef-whitespace": [false],
+		"interface-name": [true, "always-prefix"],
+		"triple-equals": [true, "allow-null-check", "allow-undefined-check"],
+		"whitespace": [true, "check-branch", "check-decl", "check-operator", "check-separator", "check-typecast", "check-preblock"],
+		"max-line-length": [true, 120],
+		"eofline": true,
+		"no-empty": true,
+		"one-variable-per-declaration": [true],
+		"member-ordering": [false],
+		"max-classes-per-file": [true, 1],
 		"no-bitwise": false
 	}
 }
