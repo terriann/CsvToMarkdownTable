@@ -5,15 +5,15 @@
 
 A simple JavaScript CSV to Markdown Table converter with Confluence Markup support
 
-[View the live demo](https://terriann.github.io/CsvToPlainTextTable/) to convert your CSV to a table on-the-fly.
+Forked from [donatj/CsvToMarkdownTable](https://github.com/donatj/CsvToMarkdownTable)
 
 Requires **no external libraries**. Works in Node as well as in the browser.
 
-### For Markdown (Github/BitBucket)
+### For Markdown Markup
 
 Example Use:
 
-    csvToMarkdown( 'header1,header2,header3\nValue1,Value2,Value3', ',', true);
+    csvToMarkdown( "header1,header2,header3\nValue1,Value2,Value3", ",", true);
 
 Outputs:
 
@@ -29,25 +29,15 @@ Which displays in Markdown as:
 |---------|---------|---------| 
 | Value1  | Value2  | Value3  | 
 
-### For Confluence Markup (JIRA/Confluence)
+### For Confluence Markup
 
 Example Use:
 
-    csvToMarkdown( 'header1,header2,header3\nValue1,Value2,Value3', ',', true, true);
+    csvToMarkdown( "header1,header2,header3\nValue1,Value2,Value3", ",", true, true);
 
 Outputs:
 
 ```
 || header1 || header2 || header3 || 
-|  Value1   | Value2   | Value3   | 
+|  Value1  |  Value2  |  Value3  | 
 ```
-
-Which displays in JIRA/Confluence as:
-
-| header1 | header2 | header3 | 
-|---------|---------|---------| 
-| Value1  | Value2  | Value3  |
-
-## Credits
-
-* Originally forked from [donatj/CsvToMarkdownTable](https://github.com/donatj/CsvToMarkdownTable)

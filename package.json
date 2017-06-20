@@ -5,13 +5,12 @@
   "version": "0.1.0",
   "types": "./lib/CsvToMarkdown.d.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha test",
-    "lint": "./node_modules/.bin/tslint -c tslint.json 'src/*.ts'",
-    "watch-build": "./node_modules/.bin/tsc --watch"
+    "test": "node_modules/.bin/mocha test",
+    "lint": "node_modules/.bin/tslint -c tslint.json 'src/*.ts'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/terriann/CsvToPlainTextTable.git"
+    "url": "git+https://github.com/donatj/CsvToMarkdownTable.git"
   },
   "keywords": [
     "csv",
@@ -21,22 +20,16 @@
     "confluence",
     "confluence markup"
   ],
-  "contributors": [
-    {
-      "name": "Jesse G. Donat",
-      "email": "donatj@gmail.com",
-      "url": "https://donatstudios.com"
-    }, {
-      "name": "Terri Ann Swallow",
-      "email": "terri.ann.s@gmail.com",
-      "url": "http://terriswallow.com"
-    }
-  ],
+  "author": {
+    "name": "Jesse G. Donat",
+    "email": "donatj@gmail.com",
+    "url": "https://donatstudios.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/terriann/CsvToPlainTextTable/issues"
   },
-  "homepage": "https://terriann.github.io/CsvToPlainTextTable/",
+  "homepage": "",
   "devDependencies": {
     "@types/node": "^7.0.12",
     "@types/requirejs": "^2.1.29",
