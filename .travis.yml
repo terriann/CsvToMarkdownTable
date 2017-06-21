@@ -7,4 +7,10 @@ node_js:
 
 before_script:
   - node_modules/.bin/tslint -c tslint.json 'src/*.ts'
+  - node_modules/.bin/ts
   - node_modules/.bin/mocha test
+
++notifications:
+  email:
+    on_success: change
+    on_failure: always 
