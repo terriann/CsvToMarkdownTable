@@ -2,3 +2,5 @@
 /node_modules
 /yarn.lock
 todo.md
+.coveralls.yml
+/coverage
