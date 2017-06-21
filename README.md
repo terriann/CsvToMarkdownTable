@@ -1,10 +1,8 @@
 
-<h1 align="center">CSV To Plain Text Table</h1>
+# CSV To Plain Text Table
 
-<div align="center">
 [![Build Status](https://travis-ci.org/terriann/CsvToPlainTextTable.svg?branch=master)](https://travis-ci.org/terriann/CsvToPlainTextTable)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/terriann/CsvToPlainTextTable/master/LICENSE.md)
-</div>
 
 A simple JavaScript CSV to Markdown Table converter with Confluence Markup support
 
