@@ -8,7 +8,7 @@ A simple JavaScript CSV to Markdown Table converter with Confluence Markup suppo
 
 [View the live demo](https://terriann.github.io/CsvToPlainTextTable/) to convert your CSV to a table on-the-fly.
 
-Requires **no external libraries**. Works in Node as well as in browser.
+Requires **no external libraries**. Works in Node.js as well as in browser.
 
 ### For Markdown (Github/BitBucket)
 
@@ -48,6 +48,10 @@ Which displays in JIRA/Confluence as:
 | header1 | header2 | header3 | 
 |---------|---------|---------| 
 | Value1  | Value2  | Value3  |
+
+## Contributing
+
+Are you interested in contributing to this project? Please read [CONTRIBUTING.md](CONTRIBUTING.md) for information on how to contribute, developer installation, required testing steps and other information about best practices for this project.
 
 ## Credits
 
