@@ -3,29 +3,33 @@ var csvToMarkdown = require('../lib/CsvToMarkdown');
 
 describe('csvToMarkdown', function () {
 
-	it('should return headers and blank row when no csv passed and all other values using defaults', function () {
+	it('should return headers and blank row when no csv data is passed and all other values, using default header setting and default tab delimeter', function () {
 		var result = csvToMarkdown("");
 		assert.equal(result, "|  | \n|--| \n|  | \n");
 	});
 
-	it('should return a table with no headers (using default header setting and default tab delimeter)', function () {
+	it('should return a table with blank headers, using default header setting and default tab delimeter', function () {
 		var result = csvToMarkdown("a\tb\tc");
 		assert.equal(result, "|   |   |   | \n|---|---|---| \n| a | b | c | \n");
 	});
 
-	it('should return a table with no headers (using default header setting)', function () {
+	it('should return a table with no headers, using default header setting', function () {
 		var result = csvToMarkdown("a\tb\tc", "\t");
 		assert.equal(result, "|   |   |   | \n|---|---|---| \n| a | b | c | \n");
 	});
 
-	it('should return malformed table using default header setting and default tab delimeter when string passed is comma delimeted', function () {
+	it('should return a single column table using default header setting and default tab delimeter when string passed is comma delimeted', function () {
 		var result = csvToMarkdown("a,b,c");
 		assert.notEqual(result, "|   |   |   | \n|---|---|---| \n| a | b | c | \n");
 		assert.equal(result, "|       | \n|-------| \n| a,b,c | \n");
 	});
 
-	it('should return a table with no headers', function () {
+	it('should return a table with blank headers', function () {
 		var result = csvToMarkdown("a\tb\tc", "\t", false);
+		assert.equal(result, "|   |   |   | \n|---|---|---| \n| a | b | c | \n");
+		var result = csvToMarkdown("a,b,c", ",", false);
+		assert.equal(result, "|   |   |   | \n|---|---|---| \n| a | b | c | \n");
+		var result = csvToMarkdown("a;b;c", ";", false);
 		assert.equal(result, "|   |   |   | \n|---|---|---| \n| a | b | c | \n");
 	});
 
