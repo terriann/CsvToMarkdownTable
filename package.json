@@ -1,0 +1,26 @@
+{
+  "name": "csv-to-plain-text-table-demo",
+  "version": "1.0.0",
+  "description": "Demo page to convert your CSV, TSV or SCSV to a Markdown or Confluence Markup ready table",
+  "main": "index.html",
+  "scripts": {
+    "dev": "./node_modules/.bin/lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terriann/CsvToMarkdownTable.git#gh-pages"
+  },
+  "author": {
+      "name": "Terri Ann Swallow",
+      "email": "terri.ann.s@gmail.com",
+      "url": "https://terriann.github.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/terriann/CsvToPlainTextTable/issues"
+  },
+  "homepage": "https://terriann.github.io/CsvToMarkdownTable",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
