@@ -1,7 +1,9 @@
 # CSV To Plain Text Table
 
-[![Build Status](https://travis-ci.org/terriann/CsvToPlainTextTable.svg?branch=master)](https://travis-ci.org/terriann/CsvToPlainTextTable)
-[![Coverage Status](https://coveralls.io/repos/github/terriann/CsvToPlainTextTable/badge.svg?branch=code-coverage)](https://coveralls.io/github/terriann/CsvToPlainTextTable?branch=code-coverage)
+[![Build Status](https://travis-ci.org/terriann/CsvToPlainTextTable.svg)](https://travis-ci.org/terriann/CsvToPlainTextTable)
+[![Coverage Status](https://coveralls.io/repos/github/terriann/CsvToPlainTextTable/badge.svg)](https://coveralls.io/github/terriann/CsvToPlainTextTable)
+[![Package Up to Date Status with David](https://david-dm.org/terriann/CsvToPlainTextTable/status.svg)](https://david-dm.org/terriann/CsvToPlainTextTable)
+[![Dev Dependency Package Up to Date Status with David](https://david-dm.org/terriann/CsvToPlainTextTable/dev-status.svg)](https://david-dm.org/terriann/CsvToPlainTextTable?type=dev)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/terriann/CsvToPlainTextTable/master/LICENSE.md)
 
 A simple JavaScript CSV to Markdown Table converter with Confluence Markup support
